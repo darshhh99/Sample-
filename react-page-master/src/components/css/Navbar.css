@@ -1,0 +1,77 @@
+/* Navbar.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Dark grey background */
+  padding: 10px 20px;
+  position: relative;
+  color: white;
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 40px; /* Adjust as needed */
+  margin-right: 10px; /* Space between logo and title */
+}
+
+.navbar-title {
+  font-size: 24px; /* Adjust font size */
+  font-weight: bold; /* Make it bold */
+  font-family: 'Roboto', sans-serif; /* Google font */
+}
+
+.navbar-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #333; /* Match background */
+  width: 200px; /* Width of the dropdown */
+  transform: translateX(100%); /* Move it completely off-screen */
+  transition: transform 0.3s ease; /* Smooth sliding effect */
+  z-index: 1; /* Ensure it appears above other content */
+  opacity: 0; /* Make it invisible by default */
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.navbar-menu.active {
+  transform: translateX(0); /* Slide it into view */
+  opacity: 1; /* Fully visible */
+  pointer-events: auto; /* Allow interaction when active */
+}
+
+.navbar-menu ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.navbar-menu li {
+  padding: 10px; /* Space around menu items */
+  border-bottom: 1px solid gray; /* Optional: border for separation */
+}
+
+.navbar-menu li a {
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.burger-menu {
+  background: none; /* Remove default button styles */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  font-size: 24px; /* Adjust size as needed */
+  cursor: pointer; /* Change cursor to pointer */
+}

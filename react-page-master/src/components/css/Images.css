@@ -1,0 +1,90 @@
+/* Images.css */
+
+.images-container {
+    position: relative;
+    padding: 20px; /* Padding for content */
+    background-color: #2e2e2e; /* Gray background color for the space theme */
+    color: white; /* White text color for contrast */
+}
+
+.background-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for better text visibility */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position relative for inner elements */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    width: 100%; /* Full width */
+    height: 300px; /* Set height for the card */
+    margin-bottom: 20px; /* Space between background and carousel */
+}
+
+.background-image {
+    width: 100%;
+    height: 100%; /* Cover the card */
+    object-fit: cover; /* Cover the entire area */
+}
+
+.background-title {
+    position: absolute; /* Position title over the image */
+    bottom: 20px; /* Position from bottom */
+    left: 20px; /* Position from left */
+    color: white; /* Text color */
+    font-family: 'Orbitron', sans-serif; /* Orbitron font */
+    font-size: 24px; /* Font size */
+    z-index: 1; /* Above the image */
+}
+
+.carousel-container {
+    margin: 20px auto; /* Center carousel with top and bottom margin */
+    width: 80%; /* Restrict carousel width */
+    position: relative;
+    height: 400px; /* Height for carousel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide overflow */
+}
+
+.carousel-image {
+    width: 100%; /* Set width to 100% of the container */
+    height: 100%; /* Set height to 100% of the container */
+    max-width: 600px; /* Fixed width for consistency */
+    max-height: 400px; /* Fixed height for consistency */
+    border-radius: 8px; /* Optional: rounded corners */
+    object-fit: cover; /* Cover the image area */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+}
+
+.fade-out {
+    opacity: 0; /* Fade out */
+}
+
+.fade-in {
+    opacity: 1; /* Fade in */
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center; /* Center the controls */
+    margin-top: 10px; /* Space above controls */
+}
+
+.arrow {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 48px; /* Arrow size */
+    cursor: pointer;
+    z-index: 10; /* Above the carousel image */
+    position: absolute; /* Position arrows absolutely */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for arrow height */
+}
+
+.left-arrow {
+    left: 10px; /* Position left arrow */
+}
+
+.right-arrow {
+    right: 10px; /* Position right arrow */
+}
